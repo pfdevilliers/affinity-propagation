@@ -1,0 +1,469 @@
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+
+
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content: ""; content: none; }
+
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+
+body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
+select, input, textarea, button { font:99% sans-serif; }
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+
+/**
+ * Minimal base styles.
+ */
+
+/* Always force a scrollbar in non-IE */
+html { overflow-y: scroll; }
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+ul, ol { margin-left: 2em; }
+ol { list-style-type: decimal; }
+
+/* Remove margins for navigation lists */
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+
+td { vertical-align: top; }
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; white-space: pre-wrap; word-wrap: break-word;
+  padding: 15px;
+}
+
+textarea { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+
+.ie6 legend, .ie7 legend { margin-left: -7px; } 
+
+/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea { margin: 0; }
+
+/* Colors for form validity */
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid {
+   border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+
+/* j.mp/webkit-tap-highlight-color */
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+
+/* Make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+
+/* Bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/**
+ * You might tweak these..
+ */
+
+body, select, input, textarea {
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+  color: #444;
+  /* Set your base font here, to apply evenly */
+  font-family: 'Helvetica-Neue', Arial, sans-serif;
+}
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #000596; }
+
+
+/**
+ * Primary styles
+ *
+ * Author: 
+ */
+
+@font-face {
+    font-family: 'DroidSerifRegular';
+    src: url('../fonts/DroidSerif-Regular-webfont.eot');
+    src: url('../fonts/DroidSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DroidSerif-Regular-webfont.woff') format('woff'),
+         url('../fonts/DroidSerif-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSerif-Regular-webfont.svg#DroidSerifRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DroidSerifItalic';
+    src: url('../fonts/DroidSerif-Italic-webfont.eot');
+    src: url('../fonts/DroidSerif-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DroidSerif-Italic-webfont.woff') format('woff'),
+         url('../fonts/DroidSerif-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSerif-Italic-webfont.svg#DroidSerifItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DroidSerifBold';
+    src: url('../fonts/DroidSerif-Bold-webfont.eot');
+    src: url('../fonts/DroidSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DroidSerif-Bold-webfont.woff') format('woff'),
+         url('../fonts/DroidSerif-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSerif-Bold-webfont.svg#DroidSerifBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'DroidSerifBoldItalic';
+    src: url('../fonts/DroidSerif-BoldItalic-webfont.eot');
+    src: url('../fonts/DroidSerif-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DroidSerif-BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/DroidSerif-BoldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSerif-BoldItalic-webfont.svg#DroidSerifBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  background: #cccccc url('../img/subliminal.gif') repeat left top;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255, 0)), to(rgba(0,0,0, 0.3)));
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,0.3));
+  background-image: -o-linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,0.3));
+  background-image: linear-gradient(top, rgba(255,255,255,0), rgba(0,0,0,0.3));
+
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.6);
+  -o-box-shadow: 0 1px 5px rgba(0,0,0,0.6);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+
+h1 {
+  font-family: 'DroidSerifBoldItalic';
+  line-height: 60px; 
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.5);
+  float: left;
+
+}
+
+h3 {
+  font-family: 'DroidSerifItalic';
+  float: right;
+  font-size: 16px;
+  line-height: 60px;
+  color: #fff;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+}
+
+div#center {
+  margin: 0 auto 0 auto;
+  width: 800px;
+}
+
+div#logo {
+  line-height: 60px; 
+}
+
+div#main {
+  margin: 0 auto 0 auto;
+  width: 800px;
+}
+
+section#affinity {
+  margin: 20px auto 20px auto;
+  width: 420px;
+  height: 320px;
+  background-color: rgba(255,255,255,0.4);
+ 
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+ 
+  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  -o-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+}
+
+section#legend{
+}
+
+canvas {
+  margin: 10px;
+}
+
+canvas#canvasLegend {
+  color: #444;
+  background-color: rgba(255,255,255,0.4);
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+ 
+  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  -o-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+}
+
+ul li {
+  text-decoration: none;
+}
+
+section#legend {
+  width: 420px;
+  margin: 0 auto 10px auto;
+  height: 20px;
+}
+
+
+div#aftercanvas {
+  width: 100%;
+  border-top: 1px solid rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+div#aftercanvas h2 {  
+  width: 800px; 
+  font-family: 'DroidSerifBoldItalic';
+  font-size: 24px;
+  color: #fff;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.5);
+  margin: 20px auto 0 auto;
+}
+
+div#aftercanvas article#definition {
+  font-family: 'DroidSerifRegular';
+  font-size: 16px;
+  margin: 10px auto 10px auto;
+  /*color: rgb(41,59,92);*/
+  color: #036;
+  text-shadow: 0 1px 3px rgba(255,255,255,0.8);
+  width: 800px;
+}
+
+div#aftercanvas article#definition ol li {
+  font-family: 'DroidSerifRegular';
+  margin: 5px 0px 5px 0px;
+}
+
+div#aftercanvas article#definition ol li span {
+  font-family: 'DroidSerifBold';
+}
+
+footer {
+  margin: 20px 0 20px 0;
+  width: 100%;
+  /*background-color: rgba(255,255,255,0.4);*/
+}
+
+footer div#finfo{
+  float:left; 
+  margin-right: 30px;
+  margin-top: 5px
+}
+
+.center {
+  margin: 0 auto 0 auto;
+  width: 800px;
+}
+
+footer span#copy {
+  font-size: 11px;
+}
+
+img#twitter {
+  background-color: rgba(255,255,255,0.6);
+  color: #fff;
+
+  -moz-border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -o-border-radius: 35px;
+  border-radius: 35px;
+}
+
+
+img#twitter:hover {
+  background-color: rgba(255,255,255,1);
+}
+/**
+ * Non-semantic helper classes: please define your styles before this section.
+ */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+   j.mp/bestclearfix */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix { zoom: 1; }
+
+
+
+/**
+ * Media queries for responsive design.
+ *
+ * These follow after primary styles so they will successfully override.
+ */
+
+@media all and (orientation:portrait) {
+  /* Style adjustments for portrait mode goes here */
+
+}
+
+@media all and (orientation:landscape) {
+  /* Style adjustments for landscape mode goes here */
+
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+
+
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+
+/**
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ */
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+
